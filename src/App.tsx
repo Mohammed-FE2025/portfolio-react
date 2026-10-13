@@ -1,12 +1,15 @@
+import Nav from "./components/nav"
+import Main from "./components/main"
 
 
 function App() {
 
 
   return (
-    <>
-      <h2 className="text-2xl font-bold text-center text-blue-500">Hello, World!</h2>
-    </>
+   <>
+     <Nav />
+     <Main />
+   </>
   )
 }
 
