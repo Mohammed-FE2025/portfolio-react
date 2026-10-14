@@ -8,4 +8,8 @@
     box-sizing: border-box;
     font-family: 'Rowdies', 'sans-serif';
   }
+
+  body {
+    background-color: #012a4a;
+  }
 }
