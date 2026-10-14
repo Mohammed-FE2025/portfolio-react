@@ -12,10 +12,10 @@ const Hero = () => {
             I am a FrontEnd Developer passionate about creating beautiful and functional web experiences.
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center md:justify-start">
-            <a href="#projects" className="rounded-full bg-yellow-400 px-6 py-3 text-lg font-semibold text-[#012a4a] hover:bg-yellow-500 active:bg-yellow-500">
+            <a href="#projects" className="rounded-full bg-yellow-400 px-6 py-3 text-lg font-semibold text-[#012a4a] hover:bg-[#012a4a] active:bg-yellow-500 hover:text-white">
               View My Projects
             </a>
-            <a href="#contact" className="rounded-full bg-yellow-400 px-6 py-3 text-lg font-semibold text-[#012a4a] hover:bg-yellow-500 active:bg-yellow-500">
+            <a href="#contact" className="rounded-full bg-yellow-400 px-6 py-3 text-lg font-semibold text-[#012a4a] hover:bg-[#012a4a] active:bg-yellow-500 hover:text-white">
               Contact Me
             </a>
           </div>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Nav() {
     const [isOpen, setIsOpen] = useState(false);
@@ -30,9 +31,9 @@ function Nav() {
         id="nav-menu"
         className={`${isOpen ? "flex" : "hidden"} w-full flex-col items-center gap-2 pt-4 sm:flex sm:w-auto sm:flex-row sm:gap-x-6 sm:pt-0`}
       >
-        <li><a href="#about" onClick={() => setIsOpen(false)} className="block text-white hover:text-gray-300 hover:bg-gray-700 active:bg-gray-700 active:text-gray-300 focus-visible:bg-gray-700 rounded-full px-5 py-2 ">About</a></li>
-        <li><a href="#projects" onClick={() => setIsOpen(false)} className="block text-white hover:text-gray-300 hover:bg-gray-700 active:bg-gray-700 active:text-gray-300 focus-visible:bg-gray-700 rounded-full px-5 py-2">Projects</a></li>
-        <li><a href="#contact" onClick={() => setIsOpen(false)} className="block text-white hover:text-gray-300 hover:bg-gray-700 active:bg-gray-700 active:text-gray-300 focus-visible:bg-gray-700 rounded-full px-5 py-2">Contact</a></li>
+        <li><Link to="/about" onClick={() => setIsOpen(false)} className="block text-white hover:text-yellow-400 active:bg-gray-700 active:text-gray-300 focus-visible:bg-gray-700 rounded-full px-5 py-2">About</Link></li>
+        <li><a href="#projects" onClick={() => setIsOpen(false)} className="block text-white hover:text-yellow-400  active:bg-gray-700 active:text-gray-300 focus-visible:bg-gray-700 rounded-full px-5 py-2">Projects</a></li>
+        <li><a href="#contact" onClick={() => setIsOpen(false)} className="block text-white hover:text-yellow-400  active:bg-gray-700 active:text-gray-300 focus-visible:bg-gray-700 rounded-full px-5 py-2">Contact</a></li>
       </ul>
     </nav>
     
