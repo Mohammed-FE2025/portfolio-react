@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Projects = () => {
   return (
-    <section className="flex flex-1 items-center bg-[#012a4a] text-white py-20 flex-col">
+    <section className="flex flex-1 items-center bg-[#013A63] text-white py-20 flex-col border-b-4 border-yellow-400 border-t-4 border-yellow-400">
       <div className="mx-auto grid w-full max-w-6xl items-center gap-10 px-4 sm:px-6 lg:px-8">
         <div className="text-center md:text-left">
           <h1 className="text-4xl font-bold sm:text-5xl lg:text-6xl">
@@ -12,7 +12,7 @@ const Projects = () => {
           <p className="mt-4 text-lg sm:text-xl lg:text-2xl">
             Here are some of the projects I have worked on.
           </p>
-          <div className="mt-8 flex flex-row items-center gap-4 sm:flex-row sm:justify-center ">
+          <div className="mt-8 flex flex-row items-center gap-4 sm:flex-row sm:justify-evenly ">
             <img
               src="src/assets/weather.jpg"
               alt="Project 1"
@@ -33,7 +33,7 @@ const Projects = () => {
       </div>
       <Link
         to="/"
-        className="mt-6 rounded-full bg-yellow-400 px-6 py-3 font-semibold text-[#012a4a] hover:bg-[#012a4a] hover:text-white "
+        className="mt-8 rounded-full bg-yellow-400 px-6 py-3 font-semibold text-[#012a4a] hover:bg-[#012a4a] hover:text-white "
       >
         Back to Home
       </Link>

@@ -1,15 +1,16 @@
 import heroImage from "../assets/man.jpg";
 import { Link } from "react-router-dom";
+import { FaReact, FaCloudSun, FaTasks } from "react-icons/fa";  
 
 const projects = [
-  { title: "Portfolio", description: "My React portfolio site.", link: "https://github.com/you/portfolio" },
-  { title: "Weather App", description: "Fetches live weather data.", link: "https://github.com/you/weather" },
-  { title: "Todo App", description: "A simple task manager.", link: "https://github.com/you/todo" },
+  { title: "Portfolio", description: "My React portfolio site.", link: "https://github.com/you/portfolio", icon: FaReact },
+  { title: "Weather App", description: "Fetches live weather data.", link: "https://github.com/you/weather",  icon: FaCloudSun, },
+  { title: "Todo App", description: "A simple task manager.", link: "https://github.com/you/todo", icon: FaTasks },
 ];
 
 const Hero = () => {
   return (
-    <section className="flex flex-1 flex-col items-center justify-center bg-[#012a4a] text-white py-20">
+    <section className="flex flex-1 flex-col items-center justify-center bg-[#013A63] text-white py-20 border-t-4 border-yellow-400 border-b-4 border-yellow-400">
       <div className="mx-auto grid w-full max-w-6xl items-center gap-10 px-4 sm:px-6 lg:px-8 md:grid-cols-2">
         <div className="text-center md:text-left">
           <h1 className="text-4xl font-bold sm:text-5xl lg:text-6xl">
@@ -37,25 +38,32 @@ const Hero = () => {
   <h2 className="text-center text-3xl font-bold sm:text-4xl">Projects</h2>
 
   <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-    {projects.map((project) => (
-      <div key={project.title} className="rounded-xl bg-white/10 p-6">
-        <h3 className="text-2xl font-bold text-yellow-400">{project.title}</h3>
-        <p className="mt-2">{project.description}</p>
-        <img
-          src={project.title === "Portfolio" ? "src/assets/man.jpg" : project.title === "Weather App" ? "src/assets/weather.jpg" : "src/assets/todo.jpg"}
-          alt={project.title}
-          className="mt-4 w-full h-48 object-cover rounded-lg hover:scale-105 transition-transform duration-300"
-        />  
-        <a
-          href={project.link}
-          target="_blank"
-          rel="noreferrer"
-          className="mt-4 inline-block rounded-full bg-yellow-400 px-4 py-2 font-semibold text-[#012a4a] hover:bg-[#012a4a] hover:text-white"
-        >
-          View
-        </a>
+   {projects.map((project) => {
+  const Icon = project.icon;
+
+  return (
+    <div key={project.title} className="rounded-xl bg-white/10 p-6 flex flex-col items-center">
+      <h3 className="text-2xl font-bold text-yellow-400">{project.title}</h3>
+      <p className="mt-2">{project.description}</p>
+
+      <div className="mt-6 flex justify-center">
+        <Icon
+          aria-hidden="true"
+          className="text-7xl text-yellow-400 transition-transform duration-300 hover:scale-110"
+        />
       </div>
-    ))}
+
+      <a
+        href={project.link}
+        target="_blank"
+        rel="noreferrer"
+        className="mt-4 inline-block rounded-full bg-yellow-400 px-4 py-2 font-semibold text-[#012a4a] hover:bg-[#012a4a] hover:text-white"
+      >
+        View
+      </a>
+    </div>
+  );
+})}
   </div>
 </div>
     </section>

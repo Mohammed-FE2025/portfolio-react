@@ -6,8 +6,8 @@ function Nav() {
 
   return (
 <nav className="flex flex-wrap items-center justify-between bg-[#012a4a] p-4">
-      <h1 className="text-2xl font-bold text-[#A9D6E5] stroke-b-2 [-webkit-text-stroke:1px_black]">
-        FrontEnd <span className="text-yellow-400 transition group-hover:text-red-400">Portfolio</span>
+      <h1 className="text-2xl font-bold text-[white] stroke-b-2 [-webkit-text-stroke:1px_black]">
+        FrontEnd <span className="text-yellow-400  ">Portfolio</span>
       </h1>
 
       <button

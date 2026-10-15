@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <section className="flex flex-1 items-center bg-[#012a4a] text-white py-20 flex-col">
+    <section className="flex flex-1 items-center bg-[#013A63] text-white py-20 flex-col border-b-4 border-yellow-400 border-t-4 border-yellow-400">
       <div className="mx-auto grid w-full max-w-6xl items-center gap-10 px-4 sm:px-6 lg:px-8">
         <div className="text-center md:text-left">
           <h1 className="text-4xl font-bold sm:text-5xl lg:text-6xl">
