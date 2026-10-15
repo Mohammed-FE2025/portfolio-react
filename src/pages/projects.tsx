@@ -12,6 +12,23 @@ const Projects = () => {
           <p className="mt-4 text-lg sm:text-xl lg:text-2xl">
             Here are some of the projects I have worked on.
           </p>
+          <div className="mt-8 flex flex-row items-center gap-4 sm:flex-row sm:justify-center ">
+            <img
+              src="src/assets/weather.jpg"
+              alt="Project 1"
+              className="w-64 h-64 object-cover rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+            />
+            <img
+              src="src/assets/todo.jpg"
+              alt="Project 2"
+              className="w-64 h-64 object-cover rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+            />
+            <img
+              src="src/assets/man.jpg"
+              alt="Project 3"
+              className="w-64 h-64 object-cover rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+            />
+          </div>
         </div>
       </div>
       <Link

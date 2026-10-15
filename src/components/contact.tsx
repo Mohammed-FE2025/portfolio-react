@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Contact = () => {
   return (
     <section className="flex flex-1 items-center bg-[#012a4a] text-white py-20 flex-col">
@@ -11,6 +13,12 @@ const Contact = () => {
           </p>
         </div>
       </div>
+      <Link
+        to="/"
+        className="mt-6 rounded-full bg-yellow-400 px-6 py-3 font-semibold text-[#012a4a] hover:bg-[#012a4a] hover:text-white "
+      >
+        Back to Home
+      </Link>
     </section>
   );
 };

@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom"
+
 import Nav from "./components/nav"
 import About from "./pages/about"
 import Hero from "./components/hero"
