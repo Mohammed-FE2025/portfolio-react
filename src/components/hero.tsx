@@ -1,11 +1,21 @@
 import heroImage from "../assets/man.jpg";
 import { Link } from "react-router-dom";
-import { FaReact, FaCloudSun, FaTasks } from "react-icons/fa";  
+import {
+  FaReact,
+  FaCloudSun,
+  FaTasks,
+  FaUtensils,
+  FaFilm,
+  FaBlog,
+} from "react-icons/fa";  
 
 const projects = [
   { title: "Portfolio", description: "My React portfolio site.", link: "https://github.com/you/portfolio", icon: FaReact },
   { title: "Weather App", description: "Fetches live weather data.", link: "https://github.com/you/weather",  icon: FaCloudSun, },
   { title: "Todo App", description: "A simple task manager.", link: "https://github.com/you/todo", icon: FaTasks },
+  { title: "Movie App", description: "A movie browsing application.", link: "https://github.com/you/new-project", icon: FaFilm },
+  { title: "Blog App", description: "A personal blogging platform.", link: "https://github.com/you/blog", icon: FaBlog },
+  { title: "Book a Table", description: "An online table reservation system.", link: "https://github.com/you/book-a-table", icon: FaUtensils }
 ];
 
 const Hero = () => {
@@ -20,10 +30,10 @@ const Hero = () => {
             I am a FrontEnd Developer passionate about creating beautiful and functional web experiences.
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center md:justify-start">
-            <Link to="/projects" className="rounded-full bg-yellow-400 px-6 py-3 text-lg font-semibold text-[#012a4a] hover:bg-[#012a4a] active:bg-yellow-500 hover:text-white">
+            <Link to="/projects" className="rounded-full bg-yellow-400 px-6 py-3 text-lg font-semibold text-[#012a4a] hover:bg-transparent active:bg-yellow-500 hover:text-white">
               View My Projects
             </Link>
-            <Link to="/contact" className="rounded-full bg-yellow-400 px-6 py-3 text-lg font-semibold text-[#012a4a] hover:bg-[#012a4a] active:bg-yellow-500 hover:text-white">
+            <Link to="/contact" className="rounded-full bg-yellow-400 px-6 py-3 text-lg font-semibold text-[#012a4a] hover:bg-transparent active:bg-yellow-500 hover:text-white">
               Contact Me
             </Link>
           </div>

@@ -33,7 +33,7 @@ const Projects = () => {
       </div>
       <Link
         to="/"
-        className="mt-8 rounded-full bg-yellow-400 px-6 py-3 font-semibold text-[#012a4a] hover:bg-[#012a4a] hover:text-white "
+        className="mt-8 rounded-full bg-yellow-400 px-6 py-3 font-semibold text-[#012a4a] hover:bg-[transparent] hover:text-white "
       >
         Back to Home
       </Link>
