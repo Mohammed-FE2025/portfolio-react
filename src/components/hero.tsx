@@ -1,22 +1,8 @@
 import heroImage from "../assets/man.jpg";
 import { Link } from "react-router-dom";
-import {
-  FaReact,
-  FaCloudSun,
-  FaTasks,
-  FaUtensils,
-  FaFilm,
-  FaBlog,
-} from "react-icons/fa";  
+import { projects } from "../data/projects";
 
-const projects = [
-  { title: "Portfolio", description: "My React portfolio site.", link: "https://github.com/you/portfolio", icon: FaReact },
-  { title: "Weather App", description: "Fetches live weather data.", link: "https://github.com/you/weather",  icon: FaCloudSun, },
-  { title: "Todo App", description: "A simple task manager.", link: "https://github.com/you/todo", icon: FaTasks },
-  { title: "Movie App", description: "A movie browsing application.", link: "https://github.com/you/new-project", icon: FaFilm },
-  { title: "Blog App", description: "A personal blogging platform.", link: "https://github.com/you/blog", icon: FaBlog },
-  { title: "Book a Table", description: "An online table reservation system.", link: "https://github.com/you/book-a-table", icon: FaUtensils }
-];
+
 
 const Hero = () => {
   return (
@@ -55,7 +41,16 @@ const Hero = () => {
     <div key={project.title} className="rounded-xl bg-white/10 p-6 flex flex-col items-center">
       <h3 className="text-2xl font-bold text-yellow-400">{project.title}</h3>
       <p className="mt-2">{project.description}</p>
-
+<div className="mt-4 flex flex-wrap justify-center gap-2">
+  {project.tags.map((tag) => (
+    <span
+      key={tag}
+      className="rounded-full bg-[#a9d6e5] px-3 py-1 text-sm font-semibold text-[#012a4a]"
+    >
+      {tag}
+    </span>
+  ))}
+</div>
       <div className="mt-6 flex justify-center">
         <Icon
           aria-hidden="true"
