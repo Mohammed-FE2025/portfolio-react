@@ -1,10 +1,16 @@
 import heroImage from "../assets/man.jpg";
 import { Link } from "react-router-dom";
 import { projects } from "../data/projects";
+import { useState } from "react";
 
-
+const projectTags = Array.from(new Set(projects.flatMap(project => project.tags)));
 
 const Hero = () => {
+  const [selectedTag, setSelectedTag] = useState("All");
+  const filteredProjects =
+  selectedTag === "All"
+    ? projects
+    : projects.filter((project) => project.tags.includes(selectedTag));
   return (
     <section className="flex flex-1 flex-col items-center justify-center bg-[#013A63] text-white py-20 border-t-4 border-yellow-400 border-b-4 border-yellow-400">
       <div className="mx-auto grid w-full max-w-6xl items-center gap-10 px-4 sm:px-6 lg:px-8 md:grid-cols-2">
@@ -32,9 +38,36 @@ const Hero = () => {
       </div>
    <div className="mx-auto mt-16 w-full max-w-6xl px-4 sm:px-6 lg:px-8">
   <h2 className="text-center text-3xl font-bold sm:text-4xl">Projects</h2>
+<div className="mt-8 flex flex-wrap justify-center gap-3">
+  <button
+    type="button"
+    onClick={() => setSelectedTag("All")}
+    className={`rounded-full px-4 py-2 font-semibold ${
+      selectedTag === "All"
+        ? "bg-yellow-400 text-[#012a4a]"
+        : "bg-white/10 text-white hover:bg-yellow-400 hover:text-[#012a4a]"
+    }`}
+  >
+    All
+  </button>
 
-  <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-   {projects.map((project) => {
+  {projectTags.map((tag) => (
+    <button
+      key={tag}
+      type="button"
+      onClick={() => setSelectedTag(tag)}
+      className={`rounded-full px-4 py-2 font-semibold ${
+        selectedTag === tag
+          ? "bg-yellow-400 text-[#012a4a]"
+          : "bg-white/10 text-white hover:bg-yellow-400 hover:text-[#012a4a]"
+      }`}
+    >
+      {tag}
+    </button>
+  ))}
+</div>
+  <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+   {filteredProjects.map((project) => {
   const Icon = project.icon;
 
   return (
