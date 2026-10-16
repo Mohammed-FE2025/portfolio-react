@@ -33,7 +33,7 @@ const Hero = () => {
         <img
           src={heroImage}
           alt="Hero Image"
-          className="mx-auto w-96 h-96 max-w-md rounded-full object-cover shadow-lg md:order-last border-4 border-white"
+          className="mx-auto w-96 h-96 max-w-md rounded-full object-cover shadow-lg md:order-last border-4 border-y-4 border-yellow-400"
         />
       </div>
    <div className="mx-auto mt-16 w-full max-w-6xl px-4 sm:px-6 lg:px-8">

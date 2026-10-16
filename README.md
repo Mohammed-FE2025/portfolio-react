@@ -1,75 +1,95 @@
-# React + TypeScript + Vite
+# FrontEnd Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+En responsiv portfolio byggd med React och TypeScript. Webbplatsen presenterar mina projekt, information om mig och olika sätt att kontakta mig.
 
-Currently, two official plugins are available:
+## Funktioner
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Responsiv layout för mobil, surfplatta och desktop
+- Startsida, Om mig, Projekt och Kontakt
+- Projektkort med ikoner, beskrivningar, teknik-taggar och länkar
+- Filtrering av projekt baserat på teknik
+- Kontaktformulär med validering
+- Länkar till e-post, GitHub och LinkedIn
 
-## React Compiler
+## Tekniker
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- TypeScript
+- Vite
+- React Router
+- Tailwind CSS
+- React Icons
 
-## Expanding the ESLint configuration
+## Kör projektet lokalt
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Klona repot:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+git clone https://github.com/Mohammed-FE2025/portfolio-react.git
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Gå till projektmappen:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+cd portfolio-react
 ```
+
+Installera alla paket:
+
+```bash
+npm install
+```
+
+Starta utvecklingsservern:
+
+```bash
+npm run dev
+```
+
+Öppna sedan adressen som visas i terminalen. Den är vanligtvis:
+
+```text
+http://localhost:5173
+```
+
+## Tillgängliga kommandon
+
+Starta utvecklingsservern:
+
+```bash
+npm run dev
+```
+
+Bygg projektet för produktion:
+
+```bash
+npm run build
+```
+
+Kontrollera koden med ESLint:
+
+```bash
+npm run lint
+```
+
+Starta produktionsversionen lokalt:
+
+```bash
+npm run preview
+```
+
+## Länkar
+
+- GitHub-repository: https://github.com/Mohammed-FE2025/portfolio-react
+- Live-version: https://portfolio-react-psi-topaz.vercel.app/
+- Figma-design: https://www.figma.com/design/Aj9S07vGnEa7KtfktHwt0R/UX?node-id=0-1&p=f&t=zrWt8xaVKZ9Gf6Z7-0
+
+## Reflektion
+
+Portfolio är byggd som en React-baserad single-page application med TypeScript, Vite och React Router. Webbplatsen är uppdelad i flera komponenter och sidor för att skapa en tydlig och återanvändbar struktur. Jag har bland annat separerat navigation, sidfot, hero-sektion och projektdel.
+
+
+Jag använder `useState` för flera interaktiva funktioner. Mobilmenyn använder state för att öppnas och stängas. Projektfiltret använder state för att hålla reda på vilken teknik som är vald. Kontaktformuläret använder också state för att lagra alla formulärfält i ett objekt och för att visa valideringsmeddelanden.
+
+
+Jag har använt AI-verktyg som stöd för formulärvalidering och filtrering. Jag har sedan anpassat och testat lösningarna så att de passar projektets krav.
